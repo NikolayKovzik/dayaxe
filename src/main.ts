@@ -1,5 +1,5 @@
 import './styles/normalize.scss';
-import './styles/basic-styles.scss';
+import './styles/main.scss';
 import './styles/fonts.scss';
 
 import BurgerMenu from './scripts/BurgerMenu';
