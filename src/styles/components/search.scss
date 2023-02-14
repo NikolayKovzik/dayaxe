@@ -1,0 +1,21 @@
+.search {
+  width: 290px;
+  &__services-list {
+    width: 100%;
+
+    display: flex;
+    column-gap: 20px;
+  }
+
+  &__service-btn {
+    background: transparent;
+
+    font-size: 16px;
+    line-height: 16px;
+    color: #fff;
+
+    &--active {
+      font-weight: bold;
+    }
+  }
+}
