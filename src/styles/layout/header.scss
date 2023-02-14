@@ -1,0 +1,19 @@
+.header {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__inner {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 140px;
+    height: 32px;
+    fill: red;
+  }
+}

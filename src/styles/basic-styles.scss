@@ -1,0 +1,55 @@
+@use "./components" as components;
+@use "./layout" as layout;
+
+* {
+  font-family: "Gilroy";
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: 400;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  display: block;
+  padding: 0px;
+}
+
+.body {
+  padding-right: 24px;
+  padding-left: 24px;
+
+  &--stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
+}
