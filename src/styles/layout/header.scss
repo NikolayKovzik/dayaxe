@@ -19,12 +19,36 @@
     @media (min-width: 768px) {
       width: 425px;
     }
+
+    @media (min-width: 1024px) {
+      width: 750px;
+    }
   }
 
   &__logo {
     width: 140px;
     height: 32px;
     fill: #ffffff;
+  }
+
+  &__menu {
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
+
+    &-list {
+      width: 300px;
+
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    &-link {
+      color: #ffffff;
+    }
   }
 
   &__user-info {
