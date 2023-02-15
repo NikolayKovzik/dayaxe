@@ -10,125 +10,128 @@
 </head>
 
 <body class="body">
-    <header class="header container">
-        <svg class="header__logo">
-            <use xlink:href="./assets/svg/sprite.svg#logo"></use>
-        </svg>
-        <div class="header__inner">
-            <div class="header__weather weather">
-                <svg class="weather__icon">
-                    <use xlink:href="./assets/svg/sprite.svg#sunny"></use>
-                </svg>
-                <p class="weather__degrees">
-                    90 °F
-                </p>
-                <p class="weather__dot">
-                    •
-                </p>
-                <p class="weather__sky">
-                    Sunny
-                </p>
-            </div>
-            <nav class="header__menu">
-                <ul class="header__menu-list">
-                    <li class="header__menu-item">
-                        <a class="header__menu-link" href="#">
-                            Help
-                        </a>
+    <div class="start-section-background"></div>
+    <div class="wrapper">
+        <header class="header container">
+            <svg class="header__logo">
+                <use xlink:href="./assets/svg/sprite.svg#logo"></use>
+            </svg>
+            <div class="header__inner">
+                <div class="header__weather weather">
+                    <svg class="weather__icon">
+                        <use xlink:href="./assets/svg/sprite.svg#sunny"></use>
+                    </svg>
+                    <p class="weather__degrees">
+                        90 °F
+                    </p>
+                    <p class="weather__dot">
+                        •
+                    </p>
+                    <p class="weather__sky">
+                        Sunny
+                    </p>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="#">
+                                Help
+                            </a>
 
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="#">
+                                How it works
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="#">
+                                For Partners
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__user-info">
+                    <img class="header__user-avatar" src="./assets/images/user-avatar.png" alt="user-avatar">
+                    <p class="header__user-name">Roboin Bobin B.</p>
+                </div>
+                <div class="hamburger">
+                    <div class="hamburger__line hamburger__line--top"></div>
+                    <div class="hamburger__line hamburger__line--middle"></div>
+                    <div class="hamburger__line hamburger__line--bottom"></div>
+                </div>
+            </div>
+        </header>
+        <section class="start-section container">
+            <h1 class="start-section__title">
+                Book pool time and amenities at luxury hotels
+            </h1>
+            <article class="search">
+                <ul class="search__services-list">
+                    <li class="search__service-item">
+                        <button class="search__service-btn search__service-btn--active">All</button>
                     </li>
-                    <li class="header__menu-item">
-                        <a class="header__menu-link" href="#">
-                            How it works
-                        </a>
+                    <li class="search__service-item">
+                        <button class="search__service-btn">Day Pass</button>
                     </li>
-                    <li class="header__menu-item">
-                        <a class="header__menu-link" href="#">
-                            For Partners
-                        </a>
+                    <li class="search__service-item">
+                        <button class="search__service-btn">Cabanas</button>
+                    </li>
+                    <li class="search__service-item">
+                        <button class="search__service-btn">Daybeds</button>
+                    </li>
+                    <!-- <li class="search__service-item">
+                        <button class="search__service-btn">Spa Passes</button>
+                    </li>
+                    <li class="search__service-item">
+                        <button class="search__service-btn">Fitness</button>
+                    </li>
+                    <li class="search__service-item">
+                        <button class="search__service-btn">Events</button> -->
                     </li>
                 </ul>
-            </nav>
-            <div class="header__user-info">
-                <img class="header__user-avatar" src="./assets/images/user-avatar.png" alt="user-avatar">
-                <p class="header__user-name">Roboin Bobin B.</p>
-            </div>
-            <div class="hamburger">
-                <div class="hamburger__line hamburger__line--top"></div>
-                <div class="hamburger__line hamburger__line--middle"></div>
-                <div class="hamburger__line hamburger__line--bottom"></div>
-            </div>
-        </div>
-    </header>
-    <section class="start-section container">
-        <h1 class="start-section__title">
-            Book pool time and amenities at luxury hotels
-        </h1>
-        <article class="search">
-            <ul class="search__services-list">
-                <li class="search__service-item">
-                    <button class="search__service-btn search__service-btn--active">All</button>
-                </li>
-                <li class="search__service-item">
-                    <button class="search__service-btn">Day Pass</button>
-                </li>
-                <li class="search__service-item">
-                    <button class="search__service-btn">Cabanas</button>
-                </li>
-                <li class="search__service-item">
-                    <button class="search__service-btn">Daybeds</button>
-                </li>
-                <!-- <li class="search__service-item">
-                    <button class="search__service-btn">Spa Passes</button>
-                </li>
-                <li class="search__service-item">
-                    <button class="search__service-btn">Fitness</button>
-                </li>
-                <li class="search__service-item">
-                    <button class="search__service-btn">Events</button> -->
-                </li>
-            </ul>
-            <form action="" class="search-form">
-                <div class="search-form__inner">
-                    <div class="search-form__section">
-                        <div class="search-form__section-inner">
-                            <span class="search-form__section-label search-form__city">
-                                Los Angeles, LA
-                            </span>
-                            <svg class="search-form__location">
-                                <use xlink:href="./assets/svg/sprite.svg#location"></use>
-                            </svg>
+                <form action="" class="search-form">
+                    <div class="search-form__inner">
+                        <div class="search-form__section">
+                            <div class="search-form__section-inner">
+                                <span class="search-form__section-label search-form__city">
+                                    Los Angeles, LA
+                                </span>
+                                <svg class="search-form__location">
+                                    <use xlink:href="./assets/svg/sprite.svg#location"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="search-form__section">
+                            <div class="search-form__section-inner">
+                                <span class="search-form__section-label search-form__date">
+                                    Jan 12 2009
+                                </span>
+                                <svg class="search-form__pin">
+                                    <use xlink:href="./assets/svg/sprite.svg#pin"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="search-form__section">
+                            <div class="search-form__section-inner">
+                                <span class="search-form__section-label search-form__guests">
+                                    2 guests
+                                </span>
+                                <svg class="search-form__pin">
+                                    <use xlink:href="./assets/svg/sprite.svg#pin"></use>
+                                </svg>
+                            </div>
                         </div>
                     </div>
-                    <div class="search-form__section">
-                        <div class="search-form__section-inner">
-                            <span class="search-form__section-label search-form__date">
-                                Jan 12 2009
-                            </span>
-                            <svg class="search-form__pin">
-                                <use xlink:href="./assets/svg/sprite.svg#pin"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="search-form__section">
-                        <div class="search-form__section-inner">
-                            <span class="search-form__section-label search-form__guests">
-                                2 guests
-                            </span>
-                            <svg class="search-form__pin">
-                                <use xlink:href="./assets/svg/sprite.svg#pin"></use>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <button class="search-form__submit-btn default-button--dark">
-                    <svg class="search-form__loupe">
-                        <use xlink:href="./assets/svg/sprite.svg#search"></use>
-                    </svg>
-                </button>
-            </form>
-        </article>
-    </section>
+                    <button class="search-form__submit-btn default-button--dark">
+                        <svg class="search-form__loupe">
+                            <use xlink:href="./assets/svg/sprite.svg#search"></use>
+                        </svg>
+                    </button>
+                </form>
+            </article>
+        </section>
+    </div>
 </body>
 
 </html>
