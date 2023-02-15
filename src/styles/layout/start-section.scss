@@ -2,23 +2,32 @@
   height: 568px;
   padding-top: 100px;
 
-  background-image: url('~/src/assets/images/first-section-background.png');
+  background-image: url("~/src/assets/images/first-section-background.png");
   background-repeat: no-repeat;
   background-position: -70px 0px;
   background-size: 910px;
 
   @media (min-width: 768px) {
     height: 904px;
+    padding-top: 240px;
     background-position: -184px 0px;
     background-size: 1447px;
   }
-  
+
   &__title {
     margin-bottom: 24px;
 
     font-size: 36px;
-    font-weight: bold;
     line-height: 36px;
+    font-weight: bold;
     color: #fff;
+    
+    @media (min-width: 768px) {
+      margin-bottom: 105px;
+      width: 399px;
+      
+      font-size: 56px;
+      line-height: 56px;
+    }
   }
 }
