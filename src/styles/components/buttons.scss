@@ -1,0 +1,16 @@
+.default-button {
+  &--dark {
+    display: block;
+
+    background: rgb(45, 185, 254);
+    background: linear-gradient(40deg, rgba(45, 185, 254, 1) 0%, rgba(78, 219, 252, 1) 100%);
+    
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  &--light {
+  }
+}
