@@ -52,4 +52,9 @@ button {
 .container {
   padding-right: 24px;
   padding-left: 24px;
+  @media (min-width: 768px) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
 }

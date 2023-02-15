@@ -7,6 +7,12 @@
   background-position: -70px 0px;
   background-size: 910px;
 
+  @media (min-width: 768px) {
+    height: 904px;
+    background-position: -184px 0px;
+    background-size: 1447px;
+  }
+  
   &__title {
     margin-bottom: 24px;
 

@@ -8,7 +8,7 @@ export default class BurgerMenu {
   constructor() {
     this.hamburger = document.querySelector('.hamburger');
     this.body = document.querySelector('.body');
-    this.laptopMinWidth = window.matchMedia('(min-width: 768px)');
+    this.laptopMinWidth = window.matchMedia('(min-width: 1024px)');
     this.init();
   }
 

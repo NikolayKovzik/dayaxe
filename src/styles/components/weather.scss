@@ -1,0 +1,15 @@
+.weather {
+  width: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  color: #ffffff;
+
+  &__icon {
+    width: 37px;
+    height: 37px;
+  }
+}
