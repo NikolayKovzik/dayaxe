@@ -1,12 +1,13 @@
 .search {
   &__services-list {
-    // width: 290px;
+    width: 290px; //!
     margin-bottom: 20px;
 
     display: flex;
     column-gap: 20px;
 
     @media (min-width: 768px) {
+      width: auto; //!
       margin-bottom: 30px;
       column-gap: 43px;
     }
