@@ -5,14 +5,13 @@
   right: 0;
 
   background-color: #3fb4ed;
-  // z-index: -1;
 
   &__container {
     height: 100px;
     max-width: 1356px;  // minus paddings
     margin: 0 auto;
-    padding-left: 42px;
-    padding-right: 42px;
+    padding-left: 24px;
+    padding-right: 24px;
 
     display: flex;
     justify-content: space-between;
@@ -24,6 +23,9 @@
     background-size: 910px;
 
     @media (min-width: 768px) {
+      padding-left: 42px;
+      padding-right: 42px;
+
       background-position: -180px 0px;
       background-size: 1440px;
     }
