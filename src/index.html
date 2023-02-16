@@ -11,6 +11,8 @@
 
 <body class="body">
     <div class="start-section-background"></div>
+    <div class="footer-background"></div>
+    <div class="footer-bottom-background"></div>
     <div class="wrapper">
         <header class="header container">
             <svg class="header__logo">
@@ -131,11 +133,11 @@
                 </form>
             </article>
         </section>
-        <section class="footer container">
+        <footer class="footer container">
             <div class="footer__body">
                 <div class="footer__links">
-                    <nav class="footer__dayaxe-links">
-                        <h3 class="footer__title">Dayaxe</h3>
+                    <nav class="footer__dayaxe-menu">
+                        <h3 class="footer__subtitle">Dayaxe</h3>
                         <ul class="footer__links-list">
                             <li class="footer__link-item">
                                 How it Works
@@ -154,8 +156,8 @@
                             </li>
                         </ul>
                     </nav>
-                    <nav class="footer__discover-links">
-                        <h3 class="footer__title">Discover</h3>
+                    <nav class="footer__discover-menu">
+                        <h3 class="footer__subtitle">Discover</h3>
                         <ul class="footer__links-list">
                             <li class="footer__link-item">
                                 Gold Pass
@@ -174,8 +176,8 @@
                             </li>
                         </ul>
                     </nav>
-                    <nav class="footer__partners-links">
-                        <h3 class="footer__title">Partners</h3>
+                    <nav class="footer__partners-menu">
+                        <h3 class="footer__subtitle">Partners</h3>
                         <ul class="footer__links-list">
                             <li class="footer__link-item">
                                 Why Dayaxe?
@@ -193,20 +195,21 @@
                     </nav>
                 </div>
                 <div class="footer__contacts">
-                    <h3 class="footer__title">New resorts launched & special offers</h3>
                     <div class="footer__mailing">
-                        <form class="email-form" action="">
-                            <input class="email-form__mailbox" type="text">
-                            <input class="email-form__submit-btn" type="submit">
-                        </form>
-                        <p class="footer__promo-sign">+15% off promo</p>
+                        <h3 class="footer__subtitle footer__contacts-subtitle">
+                            New resorts launched & special offers
+                        </h3>
+                        <div class="footer__mailing-body">
+                            <form class="email-form" action="">
+                                <input class="email-form__mailbox" type="text" placeholder="Enter email…">
+                                <input class="email-form__submit-btn default-button--dark" type="submit" value="Sign Up">
+                            </form>
+                            <p class="footer__promo-sign">+15% off promo</p>
+                        </div>
                     </div>
                     <div class="footer__social-links">
                         <svg class="footer__fb-link">
                             <use xlink:href="./assets/svg/footer.svg#fb"></use>
-                        </svg>
-                        <svg class="footer__in-link">
-                            <use xlink:href="./assets/svg/footer.svg#in"></use>
                         </svg>
                         <svg class="footer__inst-link">
                             <use xlink:href="./assets/svg/footer.svg#inst"></use>
@@ -214,15 +217,18 @@
                         <svg class="footer__vimeo-link">
                             <use xlink:href="./assets/svg/footer.svg#vimeo"></use>
                         </svg>
+                        <svg class="footer__in-link">
+                            <use xlink:href="./assets/svg/footer.svg#in"></use>
+                        </svg>
                     </div>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p class="footer__copyright">© 2018 Dayaxe.  All rights reserved.</p>
-                <nav class="about-links"> 
+                <p class="footer__copyright">© 2018 Dayaxe. All rights reserved.</p>
+                <nav class="about-links">
                     <ul class="about-links__list">
                         <li class="about-links__item">
-                            <a class="about-links__link">Terms</a> 
+                            <a class="about-links__link">Terms</a>
                         </li>
                         <li class="about-links__item">
                             <a class="about-links__link">Privacy</a>
@@ -233,7 +239,7 @@
                     </ul>
                 </nav>
             </div>
-        </section>
+        </footer>
     </div>
 </body>
 

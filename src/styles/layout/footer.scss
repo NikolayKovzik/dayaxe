@@ -1,11 +1,110 @@
 .footer {
   padding-top: 271px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 
+  background-color: #F8F8F8;
   &__body {
     display: flex;
+    gap: 32px;
+  }
+
+  &__bottom {
+    height: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #505050;
+    color: #FFFFFF;
   } 
-  
+
   &__links {
     display: flex;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  &__dayaxe-menu,
+  &__discover-menu,
+  &__partners-menu {
+    width: 200px;
+    height: 195px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+  }
+
+  &__subtitle {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #1EB6FF;
+  }
+
+  &__contacts-subtitle {
+    text-align: center;
+  }
+
+  &__links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  &__links-item {
+    font-size: 16px;
+    line-height: 16px;
+    color: #505050;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 68px;
+  }
+
+  &__mailing {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+  }
+
+  &__mailing-body {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__promo-sign {
+    padding-top: 19px;
+  }
+
+  &__social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__fb-link {
+    width: 11px;
+    height: 20px;
+  }
+
+  &__in-link {
+    width: 19px;
+    height: 18px;
+  }
+
+  &__inst-link {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__vimeo-link {
+    width: 20px;
+    height: 16px;
   }
 }

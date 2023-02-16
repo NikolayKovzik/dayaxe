@@ -1,0 +1,31 @@
+.email-form {
+  position: relative;
+  width: 306px;
+
+  &__mailbox {
+    height: 56px;
+    border-radius: 28px;
+    width: 100%;
+
+    border: none;
+
+    &::placeholder {
+      padding-left: 20px;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 400;
+    }
+  }
+
+  &__submit-btn {
+    height: 48px;
+    width: 112px;
+    padding: 0;
+
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    border-radius: 28px;
+  }
+}
