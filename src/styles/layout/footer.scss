@@ -1,25 +1,31 @@
 .footer {
-  padding-top: 271px;
+  background-color: #F8F8F8;
   display: flex;
   flex-direction: column;
   gap: 100px;
 
-  background-color: #F8F8F8;
   &__body {
-    display: flex;
-    gap: 32px;
+    margin-top: 271px;
+
+    &-container {
+      display: flex;
+      gap: 32px;
+    }
   }
 
   &__bottom {
-    height: 60px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
     background-color: #505050;
-    color: #FFFFFF;
-  } 
+
+    &-container {
+      height: 60px;
+  
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      color: #FFFFFF;
+    } 
+  }
 
   &__links {
     display: flex;
