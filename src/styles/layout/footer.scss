@@ -2,14 +2,24 @@
   background-color: #F8F8F8;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 77px;
+
+  @media (min-width: 1440px) {
+    gap: 100px;
+  }
 
   &__body {
-    margin-top: 271px;
+    margin-top: 265px;
 
     &-container {
       display: flex;
-      gap: 32px;
+      flex-direction: column;
+      gap: 66px;
+
+      @media (min-width: 1440px) {
+        gap: 32px;
+        flex-direction: row;
+      }
     }
   }
 
@@ -69,8 +79,12 @@
 
   &__contacts {
     display: flex;
-    flex-direction: column;
-    gap: 68px;
+    gap: 35px;
+
+    @media (min-width: 1440px) {
+      gap: 68px;
+      flex-direction: column;
+    }
   }
 
   &__mailing {
@@ -92,6 +106,11 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    padding-top: 50px;
+
+    @media (min-width: 1440px) {
+      padding-top: 0px;
+    }
   }
 
   &__fb-link {

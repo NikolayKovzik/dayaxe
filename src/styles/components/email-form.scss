@@ -1,6 +1,10 @@
 .email-form {
   position: relative;
-  width: 306px;
+  width: 319px;
+
+  @media (min-width: 1440px) {
+    width: 306px;
+  }
 
   &__mailbox {
     height: 56px;
