@@ -1,9 +1,13 @@
 .email-form {
   position: relative;
-  width: 319px;
+  width: 272px;
 
   @media (min-width: 1440px) {
     width: 306px;
+  }
+
+  @media (min-width: 768px) {
+    width: 319px;
   }
 
   &__mailbox {
@@ -27,9 +31,14 @@
     padding: 0;
 
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 3px;
+    right: 3px;
 
     border-radius: 28px;
+
+    @media (min-width: 768px) {
+      top: 5px;
+      right: 5px;
+    }
   }
 }
