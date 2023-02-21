@@ -48,16 +48,21 @@ export default class HotelsSlider {
   init() {
     this.generateSliderButtons();
     this.mqlTablet.addEventListener('change', () => {
-      this.currentSlideNumber = 1;
-      this.setButtonsCount();
+      this.moveSliderToStartPosition();
       this.updateButtonsList();
-      this.setSlideWidth();
     });
     this.mqlDesktop.addEventListener('change', () => {
-      this.currentSlideNumber = 1;
-      this.setButtonsCount();
-      this.setSlideWidth();
+      this.moveSliderToStartPosition();
     });
+  }
+
+  moveSliderToStartPosition() {
+    this.hotelsListElement.style.left = '0px';
+    this.resetActiveButton();
+    (this.buttonsListElement.firstChild as HTMLElement).classList.add('hotels__pagination-bullet--active');
+    this.currentSlideNumber = 1;
+    this.setButtonsCount();
+    this.setSlideWidth();
   }
 
   generateSliderButtons() {
@@ -73,7 +78,8 @@ export default class HotelsSlider {
       }
 
       buttonElem.addEventListener('click', e => {
-        this.changeActiveButton(e.currentTarget as HTMLElement);
+        this.resetActiveButton();
+        (e.currentTarget as HTMLElement).classList.add('hotels__pagination-bullet--active');
         this.changeSlide(e);
       });
 
@@ -97,26 +103,16 @@ export default class HotelsSlider {
       this.hotelsListElement.style.left === '' ? 0 : parseInt(this.hotelsListElement.style.left, 10);
 
     if (slideNumber > this.currentSlideNumber) {
-      console.log('this.hotelsListElement.style.left', this.hotelsListElement.style.left);
-      console.log('this.currentSlideNumber', this.currentSlideNumber);
-      console.log('slideNumber', slideNumber);
-
       const px = parsedLeftVal - (slideNumber - this.currentSlideNumber) * this.currentSlideWidth;
 
-      console.log('px ', px);
       this.hotelsListElement.style.left = `${px}px`;
       this.currentSlideNumber = slideNumber;
     }
 
     if (slideNumber < this.currentSlideNumber) {
-      console.log('this.hotelsListElement.style.left', this.hotelsListElement.style.left);
-      console.log('this.currentSlideNumber', this.currentSlideNumber);
-      console.log('slideNumber', slideNumber);
       const px = parsedLeftVal + (this.currentSlideNumber - slideNumber) * this.currentSlideWidth;
 
-      console.log('px ', px);
       this.hotelsListElement.style.left = `${px}px`;
-      console.log('this.hotelsListElement.style.left', this.hotelsListElement.style.left);
 
       this.currentSlideNumber = slideNumber;
     }
@@ -129,7 +125,7 @@ export default class HotelsSlider {
     // }
   }
 
-  changeActiveButton(currentTarget: HTMLElement) {
+  resetActiveButton() {
     const { children } = this.buttonsListElement;
 
     for (let j = 0; j < children.length; j++) {
@@ -137,6 +133,5 @@ export default class HotelsSlider {
 
       button.classList.remove('hotels__pagination-bullet--active');
     }
-    currentTarget.classList.add('hotels__pagination-bullet--active');
   }
 }
