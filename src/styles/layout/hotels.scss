@@ -1,8 +1,12 @@
 .hotels {
 
   &__container {
-    width: 688px;
+    width: 290px;
     margin: 0px auto;
+
+    @media (min-width: 768px) {
+      width: 688px;
+    }
 
     @media (min-width: 1440px) {
       width: 1128px;
@@ -33,7 +37,11 @@
   }
 
   &__logo-wrapper {
-    width: 86px;
+    width: 105px;
+
+    @media (min-width: 768px) {
+      width: 86px;
+    }
 
     @media (min-width: 1440px) {
       width: 141px;
