@@ -1,29 +1,47 @@
 .hotels {
 
   &__container {
+    width: 688px;
+    margin: 0px auto;
 
+    @media (min-width: 1440px) {
+      width: 1128px;
+    }
   }
 
   &__slider {
+    height: 73px;
     position: relative;
     overflow: hidden;
-    height: 120px;
+
+    @media (min-width: 1440px) {
+      height: 120px;
+    }
   }
 
   &__list {
+    height: 73px;
     position: absolute;
     top: 0px;
     left: 0px;
     display: flex;
     justify-content: center;
+
+    @media (min-width: 1440px) {
+      height: 120px;
+    }
   }
 
   &__logo-wrapper {
-    width: 141px;
+    width: 86px;
+
+    @media (min-width: 1440px) {
+      width: 141px;
+    }
   }
 
   &__logo {
-
+    height: 100%;
   }
 
   &__pagination {
@@ -35,16 +53,21 @@
   }
 
   &__pagination-bullet {
-    width: 10px;
-    height: 10px;
+    width: 7px;
+    height: 7px;
 
-    border: 2px solid #E8E8E8;
+    border: 2px solid #e8e8e8;
     background-color: #ffffff;
     border-radius: 50%;
 
+    @media (min-width: 1440px) {
+      width: 10px;
+      height: 10px;
+    }
+
     &--active {
-      border: 2px solid #2FB8FE;
-      background-color: #2FB8FE;
+      border: 2px solid #2fb8fe;
+      background-color: #2fb8fe;
     }
   }
 }
