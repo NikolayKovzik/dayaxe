@@ -1,6 +1,4 @@
 export default class HotelsSlider {
-  private srcArr: string[];
-
   private hotelsListElement: HTMLElement;
 
   private buttonsListElement: HTMLElement;
@@ -106,23 +104,15 @@ export default class HotelsSlider {
       const px = parsedLeftVal - (slideNumber - this.currentSlideNumber) * this.currentSlideWidth;
 
       this.hotelsListElement.style.left = `${px}px`;
-      this.currentSlideNumber = slideNumber;
     }
 
     if (slideNumber < this.currentSlideNumber) {
       const px = parsedLeftVal + (this.currentSlideNumber - slideNumber) * this.currentSlideWidth;
 
       this.hotelsListElement.style.left = `${px}px`;
-
-      this.currentSlideNumber = slideNumber;
     }
 
-    // if (slideNumber < this.currentSlideNumber) {
-    //   console.log(this.hotelsListElement.style.left);
-    //   this.hotelsListElement.style.left = `${
-    //     +this.hotelsListElement.style.left - (slideNumber - this.currentSlideNumber) * this.currentSlideWidth
-    //   }px`;
-    // }
+    this.currentSlideNumber = slideNumber;
   }
 
   resetActiveButton() {
