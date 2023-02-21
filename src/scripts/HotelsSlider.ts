@@ -1,34 +1,34 @@
-// export default class HotelsSlider {
-//   private srcArr: string[];
+export default class HotelsSlider {
+  private srcArr: string[];
 
-//   private container: HTMLElement;
+  private logosContainer: HTMLElement;
 
-//   constructor() {
-//     this.srcArr = [
-//       './assets/images/hotels/the_ritz_carlton.png',
-//       './assets/images/hotels/hyatt.png',
-//       './assets/images/hotels/viceroy.png',
-//       './assets/images/hotels/fairmont.png',
-//       './assets/images/hotels/four_seasons.png',
-//       './assets/images/hotels/hilton.png',
-//       './assets/images/hotels/westin.png',
-//       './assets/images/hotels/intercontinental.png',
-//       './assets/images/hotels/the_ritz_carlton2.png',
-//       './assets/images/hotels/hyatt2.png',
-//       './assets/images/hotels/viceroy2.png',
-//       './assets/images/hotels/fairmont2.png',
-//       './assets/images/hotels/four_seasons2.png',
-//       './assets/images/hotels/hilton2.png',
-//       './assets/images/hotels/westin2.png',
-//       './assets/images/hotels/intercontinental2.png',
-//     ];
-//     this.container = document.querySelector('.hotels__list');
-//   }
+  private buttonsContainer: HTMLElement;
 
-//   init() {}
+  private hotelsCount: number;
 
-//   createElement() {
+  private buttonsCount: number;
 
-//   }
+  constructor() {
+    this.logosContainer = document.querySelector('.hotels__list');
+    this.hotelsCount = this.logosContainer.childElementCount;
+    this.buttonsCount = Math.ceil(this.hotelsCount / 3);
+    this.buttonsContainer = document.querySelector('.hotels__pagination');
+    this.init();
+  }
 
-// }
+  init() {
+    this.generateSliderButtons();
+  }
+
+  generateSliderButtons() {
+    for (let i = 0; i < this.buttonsCount; i++) {
+      const buttonElem = `
+        <button class="hotels__pagination-bullet"></button>
+      `;
+
+      this.buttonsContainer.insertAdjacentHTML('beforeend', buttonElem);
+    }
+    this.buttonsContainer.firstElementChild?.classList.add('hotels__pagination-bullet--active');
+  }
+}
