@@ -9,16 +9,26 @@ export default class HotelsSlider {
 
   private buttonsCount: number;
 
+  private mql: MediaQueryList;
+
   constructor() {
+    this.mql = window.matchMedia('(min-width: 768px)');
     this.logosContainer = document.querySelector('.hotels__list');
     this.hotelsCount = this.logosContainer.childElementCount;
-    this.buttonsCount = Math.ceil(this.hotelsCount / 3);
+    this.setButtonsCount();
     this.buttonsContainer = document.querySelector('.hotels__pagination');
     this.init();
   }
 
+  setButtonsCount() {
+    const slideElementsCount = this.mql.matches ? 8 : 3;
+
+    this.buttonsCount = Math.ceil(this.hotelsCount / slideElementsCount);
+  }
+
   init() {
     this.generateSliderButtons();
+    this.mql.addEventListener('change', () => this.updateButtonsList());
   }
 
   generateSliderButtons() {
@@ -30,5 +40,13 @@ export default class HotelsSlider {
       this.buttonsContainer.insertAdjacentHTML('beforeend', buttonElem);
     }
     this.buttonsContainer.firstElementChild?.classList.add('hotels__pagination-bullet--active');
+  }
+
+  updateButtonsList() {
+    while (this.buttonsContainer.firstChild) {
+      this.buttonsContainer.removeChild(this.buttonsContainer.lastChild);
+    }
+    this.setButtonsCount();
+    this.generateSliderButtons();
   }
 }
