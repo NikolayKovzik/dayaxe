@@ -1,7 +1,7 @@
 .hotels {
 
   &__container {
-    width: 290px;
+    width: 310px;
     margin: 0px auto;
 
     @media (min-width: 768px) {
@@ -30,7 +30,7 @@
     display: flex;
     justify-content: center;
 
-    transition: left 0.5s;
+    transition: all 0.5s;
   
     @media (min-width: 1440px) {
       height: 120px;

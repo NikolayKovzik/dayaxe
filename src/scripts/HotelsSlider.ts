@@ -30,12 +30,12 @@ export default class HotelsSlider {
   }
 
   setSlideWidth() {
-    if (this.mqlDesktop) {
+    if (this.mqlDesktop.matches) {
       this.currentSlideWidth = 1128;
-    } else if (this.mqlTablet) {
+    } else if (this.mqlTablet.matches) {
       this.currentSlideWidth = 688;
     } else {
-      this.currentSlideWidth = 290;
+      this.currentSlideWidth = 310;
     }
   }
 
@@ -93,21 +93,40 @@ export default class HotelsSlider {
 
     const slideNumber = +el.dataset.slideNumber;
 
+    const parsedLeftVal =
+      this.hotelsListElement.style.left === '' ? 0 : parseInt(this.hotelsListElement.style.left, 10);
+
     if (slideNumber > this.currentSlideNumber) {
-      console.log(this.hotelsListElement.style.left);
-      this.hotelsListElement.style.left = `${
-        +this.hotelsListElement.style.left + (slideNumber - this.currentSlideNumber) * this.currentSlideWidth
-      }px`;
+      console.log('this.hotelsListElement.style.left', this.hotelsListElement.style.left);
+      console.log('this.currentSlideNumber', this.currentSlideNumber);
+      console.log('slideNumber', slideNumber);
+
+      const px = parsedLeftVal - (slideNumber - this.currentSlideNumber) * this.currentSlideWidth;
+
+      console.log('px ', px);
+      this.hotelsListElement.style.left = `${px}px`;
+      this.currentSlideNumber = slideNumber;
     }
 
     if (slideNumber < this.currentSlideNumber) {
-      console.log(this.hotelsListElement.style.left);
-      this.hotelsListElement.style.left = `${
-        +this.hotelsListElement.style.left - (slideNumber - this.currentSlideNumber) * this.currentSlideWidth
-      }px`;
+      console.log('this.hotelsListElement.style.left', this.hotelsListElement.style.left);
+      console.log('this.currentSlideNumber', this.currentSlideNumber);
+      console.log('slideNumber', slideNumber);
+      const px = parsedLeftVal + (this.currentSlideNumber - slideNumber) * this.currentSlideWidth;
+
+      console.log('px ', px);
+      this.hotelsListElement.style.left = `${px}px`;
+      console.log('this.hotelsListElement.style.left', this.hotelsListElement.style.left);
+
+      this.currentSlideNumber = slideNumber;
     }
 
-    this.currentSlideNumber = slideNumber;
+    // if (slideNumber < this.currentSlideNumber) {
+    //   console.log(this.hotelsListElement.style.left);
+    //   this.hotelsListElement.style.left = `${
+    //     +this.hotelsListElement.style.left - (slideNumber - this.currentSlideNumber) * this.currentSlideWidth
+    //   }px`;
+    // }
   }
 
   changeActiveButton(currentTarget: HTMLElement) {
