@@ -100,13 +100,7 @@ export default class HotelsSlider {
     const parsedLeftVal =
       this.hotelsListElement.style.left === '' ? 0 : parseInt(this.hotelsListElement.style.left, 10);
 
-    if (slideNumber > this.currentSlideNumber) {
-      const px = parsedLeftVal - (slideNumber - this.currentSlideNumber) * this.currentSlideWidth;
-
-      this.hotelsListElement.style.left = `${px}px`;
-    }
-
-    if (slideNumber < this.currentSlideNumber) {
+    if (slideNumber !== this.currentSlideNumber) {
       const px = parsedLeftVal + (this.currentSlideNumber - slideNumber) * this.currentSlideWidth;
 
       this.hotelsListElement.style.left = `${px}px`;
