@@ -24,39 +24,33 @@
 
   &__offer {
     overflow: hidden;
+
+    box-shadow: 0px 0px 18px 18px rgba(230, 230, 230, 1);
+    border-radius: 6px;
+
     &--popular {
       width: 430px;
       grid-row: 1 / 4;
     }
 
-    &--cabanas {
-      height: 200px;
-    }
-
-    &--spa {
-      height: 200px;
-    }
-
-    &--daybeds {
-      height: 200px;
-    }
-
-    &--fitness {
-      height: 200px;
-    }
-
-    &--events {
-      height: 200px;
-    }
-
+    &--cabanas,
+    &--spa,
+    &--daybeds,
+    &--fitness,
+    &--events,
     &--premium {
       height: 200px;
-      background-color: red;
     }
   }
 
+  &__offer-link {
+    height: 100%;
+    display: block;
+  }
+
   &__card {
-    overflow: hidden;
+    height: 100%;
+    position: relative;
   }
 
   &__card-img {
@@ -65,8 +59,131 @@
     object-fit: cover;
   }
 
-  &__offer-link {
-    height: 100%;
-    display: block;
+  &__card-content {
+    width: calc(100% - 48px);
+    padding-left: 24px;
+    padding-right: 24px;
+
+    position: absolute;
+    bottom: 24px;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  &__offer--premium &__card-content {
+    width: calc(100% - 80px);
+    padding-left: 40px;
+    padding-right: 40px;
+
+    top: 40px;
+    bottom: auto;
+
+    flex-direction: column;
+    gap: 17px;
+  }
+
+  &__offer--popular &__card-content {
+    width: calc(100% - 80px);
+    padding-left: 40px;
+    padding-right: 40px;
+
+    top: 50px;
+    bottom: auto;
+
+    flex-direction: column;
+  }
+
+  &__card-button--popular {
+    width: 160px;
+    height: 56px;
+
+    border-radius: 28px;
+
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &__card-button--popular &__card-price {
+    font-size: 16px;
+  }
+
+  &__offer--popular &__card-rank {
+    margin-bottom: 6px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #1eb6ff;
+  }
+
+  &__offer--popular &__card-name--popular {
+    margin-bottom: 428px;
+
+    font-size: 67px;
+    line-height: 67px;
+    font-weight: bold;
+  }
+
+  &__card-button-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__card-info-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__card-name,
+  &__card-price {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
+  &__card-description {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: bold;
+  }
+
+  &__offer--premium &__card-description {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__offer--premium &__card-name {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &__offer--popular &__card-name--popular,
+  &__offer--spa &__card-content,
+  &__offer--premium &__card-content {
+    color: #505050;
+  }
+
+  &__goldpass-button {
+    width: 50px;
+    height: 50px;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    background: linear-gradient(100deg, #2db9fe 0%, #4edbfc 100%);
+    border-radius: 100% 0px 0px 0px;
+  }
+
+  &__goldpass-button-icon {
+    position: absolute;
+    bottom: 16px;
+    right: 14px;
+    width: 12px;
+    height: 12px;
   }
 }
