@@ -111,10 +111,12 @@
     gap: 13px;
   }
 
-  &__links-item {
+  &__link-item {
     font-size: 16px;
     line-height: 16px;
     color: #505050;
+
+    cursor: pointer;
   }
 
   &__contacts {
@@ -200,6 +202,13 @@
   &__vimeo-link {
     width: 20px;
     height: 16px;
+  }
+
+  &__fb-link,
+  &__in-link,
+  &__inst-link,
+  &__vimeo-link {
+    cursor: pointer;
   }
 
   &__arrow-up {

@@ -19,18 +19,22 @@
 
     background-image: url("~/src/assets/images/first-section-background.png");
     background-repeat: no-repeat;
-    background-position: -70px 0px;
-    background-size: 910px;
+    background-position: -200px 0px;
+    background-size: 1135px;
 
     @media (min-width: 768px) {
       padding-left: 42px;
       padding-right: 42px;
 
-      background-position: -180px 0px;
-      background-size: 1440px;
+      background-position: -182px 0px;
+      background-size: 1447px;
     }
     @media (min-width: 1024px) {
       background-position: 0px 0px;
+    }
+
+    @media (min-width: 1440px) {
+      box-shadow: inset 92px 0px 0px 0px #3fb4ed;
     }
   }
 
@@ -77,6 +81,8 @@
 
   &__user-info {
     display: none;
+    cursor: pointer;
+    
     @media (min-width: 768px) {
       width: 172px;
 
