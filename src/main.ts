@@ -1,6 +1,8 @@
+/* eslint-disable no-new */
 import './styles/main.scss';
 
 import BurgerMenu from './scripts/BurgerMenu';
+import HotelsSlider from './scripts/HotelsSlider';
 
-// eslint-disable-next-line no-new
 new BurgerMenu();
+new HotelsSlider();
