@@ -1,5 +1,5 @@
 .footer {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   display: flex;
   flex-direction: column;
   gap: 41px;
@@ -13,6 +13,7 @@
   }
 
   &__body {
+    position: relative;
     margin-top: 254px;
 
     @media (min-width: 768px) {
@@ -40,21 +41,21 @@
 
     &-container {
       height: 88px;
-  
+
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-  
-      color: #FFFFFF;
+
+      color: #ffffff;
 
       @media (min-width: 768px) {
         height: 60px;
-  
+
         flex-direction: row;
         justify-content: space-between;
       }
-    } 
+    }
   }
 
   &__links {
@@ -89,7 +90,7 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
-    color: #1EB6FF;
+    color: #1eb6ff;
 
     @media (min-width: 576px) {
       width: auto;
@@ -142,8 +143,8 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    
-    @media (min-width: 768px) {
+
+    @media (min-width: 576px) {
       flex-direction: row;
       gap: 16px;
     }
@@ -153,9 +154,14 @@
     padding-top: 0px;
     text-align: center;
 
-    @media (min-width: 768px) {
+    @media (min-width: 576px) {
       padding-top: 19px;
       text-align: left;
+    }
+
+    &-percentage {
+      color: #1eb6ff;
+      font-weight: bold;
     }
   }
 
@@ -194,5 +200,33 @@
   &__vimeo-link {
     width: 20px;
     height: 16px;
+  }
+
+  &__arrow-up {
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+
+    border-radius: 50%;
+    border: 3px solid #1eb6ff;
+    box-shadow: 0px 0px 15px 3px rgba(30, 182, 255, 1);
+
+    cursor: pointer;
+
+    &-icon {
+      width: 50%;
+      height: 50%;
+    }
+
+    @media (min-width: 768px) {
+      width: 60px;
+      height: 60px;
+
+      bottom: 0px;
+      right: 40px;
+    }
   }
 }
