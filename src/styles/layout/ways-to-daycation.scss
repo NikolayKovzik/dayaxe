@@ -2,6 +2,17 @@
   height: 1000px;
   padding-top: 100px;
 
+  &__container {
+    max-width: 1128px;
+    margin: 0 auto;
+    padding-right: 24px;
+    padding-left: 24px;
+    @media (min-width: 768px) {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+  }
+
   &__title {
     margin-bottom: 30px;
 
@@ -17,9 +28,14 @@
 
   &__offers {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 30px;
+
+    @media (min-width: 1150px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
   }
 
   &__offer {
@@ -29,8 +45,11 @@
     border-radius: 6px;
 
     &--popular {
-      width: 430px;
-      grid-row: 1 / 4;
+      grid-row: 1 / 3;
+      @media (min-width: 1150px) {
+        width: 430px;
+        grid-row: 1 / 4;
+      }
     }
 
     &--cabanas,
@@ -39,18 +58,48 @@
     &--fitness,
     &--events,
     &--premium {
-      height: 200px;
+      height: 240px;
+      @media (min-width: 1150px) {
+        height: 200px;
+      }
+    }
+
+    &--fitness,
+    &--events {
+      display: none;
+      @media (min-width: 1150px) {
+        display: block;
+      }
     }
   }
 
   &__offer-link {
     height: 100%;
     display: block;
+
+    cursor: pointer;
   }
 
   &__card {
     height: 100%;
     position: relative;
+  }
+
+  &__card-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__offer--popular &__card {
+    padding-top: 125px;
+    @media (min-width: 1150px) {
+      padding-top: 145px;
+    }
+  }
+
+  &__card {
+    padding-top: 0px;
   }
 
   &__card-img {
@@ -79,11 +128,15 @@
     padding-left: 40px;
     padding-right: 40px;
 
-    top: 40px;
+    top: 50px;
     bottom: auto;
 
     flex-direction: column;
     gap: 17px;
+
+    @media (min-width: 1150px) {
+      top: 40px;
+    }
   }
 
   &__offer--popular &__card-content {
@@ -95,6 +148,13 @@
     bottom: auto;
 
     flex-direction: column;
+  }
+
+  &__offer--popular &__card-img {
+    height: 385px;
+    @media (min-width: 768px) {
+      height: auto;
+    }
   }
 
   &__card-button--popular {
@@ -122,9 +182,13 @@
   &__offer--popular &__card-name--popular {
     margin-bottom: 428px;
 
-    font-size: 67px;
-    line-height: 67px;
+    font-size: 47px;
+    line-height: 47px;
     font-weight: bold;
+    @media (min-width: 1150px) {
+      font-size: 67px;
+      line-height: 67px;
+    }
   }
 
   &__card-button-container {
