@@ -1,0 +1,67 @@
+.search {
+
+  &__services-list {
+    width: 290px; //!
+    margin-bottom: 20px;
+
+    display: flex;
+    column-gap: 20px;
+
+    @media (min-width: 768px) {
+      width: auto; //!
+      margin-bottom: 30px;
+      column-gap: 43px;
+    }
+
+    @media (min-width: 1440px) {
+      margin-left: 100px;
+      column-gap: 5px;
+    }
+  }
+
+  &__service-item {
+    @media (min-width: 1024px) {
+      &:nth-child(1) .search__service-btn {
+        width: 45px;
+      }
+      &:nth-child(2) .search__service-btn {
+        width: 93px;
+      }
+      &:nth-child(3) .search__service-btn {
+        width: 95px;
+      }
+      &:nth-child(4) .search__service-btn {
+        width: 95px;
+      }
+      &:nth-child(5) .search__service-btn {
+        width: 109px;
+      }
+      &:nth-child(6) .search__service-btn {
+        width: 76px;
+      }
+      &:nth-child(7) .search__service-btn {
+        width: 75px;
+      }
+    }
+  }
+
+  &__service-btn {
+    background: transparent;
+
+    font-size: 16px;
+    line-height: 16px;
+    color: #ffffff;
+
+    @media (min-width: 1024px) {
+      height: 27px;
+
+      background: #ffffff;
+      color: #505050;
+      border-radius: 100px;
+    }
+
+    &--active {
+      font-weight: bold;
+    }
+  }
+}
