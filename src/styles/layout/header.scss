@@ -1,14 +1,38 @@
 .header {
-  height: 100px;
-
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #3fb4ed;
+
+  &__container {
+    height: 100px;
+    max-width: 1356px;  // minus paddings
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-image: url("~/src/assets/images/first-section-background.png");
+    background-repeat: no-repeat;
+    background-position: -70px 0px;
+    background-size: 910px;
+
+    @media (min-width: 768px) {
+      padding-left: 42px;
+      padding-right: 42px;
+
+      background-position: -180px 0px;
+      background-size: 1440px;
+    }
+    @media (min-width: 1024px) {
+      background-position: 0px 0px;
+    }
+  }
 
   &__inner {
     height: 80px; //40px

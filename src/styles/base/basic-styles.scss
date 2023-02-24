@@ -43,6 +43,9 @@ button {
 }
 
 .body {
+  display: flex;
+  flex-direction: column;
+
   &--stop-scrolling {
     height: 100%;
     overflow: hidden;
@@ -50,32 +53,17 @@ button {
 }
 
 .container {
+  max-width: 1128px; // 1440 minus paddings
+  margin: 0 auto;
+
   padding-right: 24px;
   padding-left: 24px;
   @media (min-width: 768px) {
     padding-right: 40px;
     padding-left: 40px;
   }
-}
-
-.wrapper {
-  position: relative;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.start-section-background {
-  position: absolute;
-  background-color: #35b3f1;
-  height: 568px;
-  width: 100%;
-  z-index: -1;
-
-  @media (min-width: 768px) {
-    height: 904px;
-  }
-
   @media (min-width: 1024px) {
-    height: 800px;
+    padding-right: 156px;
+    padding-left: 156px;
   }
 }

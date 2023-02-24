@@ -1,0 +1,44 @@
+.email-form {
+  position: relative;
+  width: 272px;
+
+  @media (min-width: 1440px) {
+    width: 306px;
+  }
+
+  @media (min-width: 768px) {
+    width: 319px;
+  }
+
+  &__mailbox {
+    height: 56px;
+    border-radius: 28px;
+    width: 100%;
+
+    border: none;
+
+    &::placeholder {
+      padding-left: 20px;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 400;
+    }
+  }
+
+  &__submit-btn {
+    height: 48px;
+    width: 112px;
+    padding: 0;
+
+    position: absolute;
+    top: 3px;
+    right: 3px;
+
+    border-radius: 28px;
+
+    @media (min-width: 768px) {
+      top: 5px;
+      right: 5px;
+    }
+  }
+}

@@ -10,9 +10,9 @@
 </head>
 
 <body class="body">
-    <div class="start-section-background"></div>
-    <div class="wrapper">
-        <header class="header container">
+
+    <header class="header">
+        <div class="header__container">
             <svg class="header__logo">
                 <use xlink:href="./assets/svg/sprite.svg#logo"></use>
             </svg>
@@ -61,8 +61,10 @@
                     <div class="hamburger__line hamburger__line--bottom"></div>
                 </div>
             </div>
-        </header>
-        <section class="start-section container">
+        </div>
+    </header>
+    <section class="start-section">
+        <div class="start-section__container container">
             <h1 class="start-section__title">
                 Book pool time and amenities at luxury hotels
             </h1>
@@ -81,13 +83,13 @@
                         <button class="search__service-btn">Daybeds</button>
                     </li>
                     <!-- <li class="search__service-item">
-                        <button class="search__service-btn">Spa Passes</button>
-                    </li>
-                    <li class="search__service-item">
-                        <button class="search__service-btn">Fitness</button>
-                    </li>
-                    <li class="search__service-item">
-                        <button class="search__service-btn">Events</button> -->
+                            <button class="search__service-btn">Spa Passes</button>
+                        </li>
+                        <li class="search__service-item">
+                            <button class="search__service-btn">Fitness</button>
+                        </li>
+                        <li class="search__service-item">
+                            <button class="search__service-btn">Events</button> -->
                     </li>
                 </ul>
                 <form action="" class="search-form">
@@ -130,8 +132,120 @@
                     </button>
                 </form>
             </article>
-        </section>
-    </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__body">
+            <div class="footer__body-container container">
+                <div class="footer__links">
+                    <nav class="footer__dayaxe-menu">
+                        <h3 class="footer__subtitle">Dayaxe</h3>
+                        <ul class="footer__links-list">
+                            <li class="footer__link-item">
+                                How it Works
+                            </li>
+                            <li class="footer__link-item">
+                                About Us
+                            </li>
+                            <li class="footer__link-item">
+                                Press
+                            </li>
+                            <li class="footer__link-item">
+                                Help
+                            </li>
+                            <li class="footer__link-item">
+                                Blog
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__discover-menu">
+                        <h3 class="footer__subtitle">Discover</h3>
+                        <ul class="footer__links-list">
+                            <li class="footer__link-item">
+                                Gold Pass
+                            </li>
+                            <li class="footer__link-item">
+                                Gift Card
+                            </li>
+                            <li class="footer__link-item">
+                                Free Daycations
+                            </li>
+                            <li class="footer__link-item">
+                                Cities
+                            </li>
+                            <li class="footer__link-item">
+                                Resorts
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__partners-menu">
+                        <h3 class="footer__subtitle">Partners</h3>
+                        <ul class="footer__links-list">
+                            <li class="footer__link-item">
+                                Why Dayaxe?
+                            </li>
+                            <li class="footer__link-item">
+                                Partner Login
+                            </li>
+                            <li class="footer__link-item">
+                                Partner Signup
+                            </li>
+                            <li class="footer__link-item">
+                                Refer Hotel
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__contacts">
+                    <div class="footer__mailing">
+                        <h3 class="footer__subtitle footer__contacts-subtitle">
+                            New resorts launched & special offers
+                        </h3>
+                        <div class="footer__mailing-body">
+                            <form class="email-form" action="">
+                                <input class="email-form__mailbox" type="text" placeholder="Enter email…">
+                                <input class="email-form__submit-btn default-button--dark" type="submit"
+                                    value="Sign Up">
+                            </form>
+                            <p class="footer__promo-sign">+15%&nbsp;off&nbsp;promo</p>
+                        </div>
+                    </div>
+                    <div class="footer__social-links">
+                        <svg class="footer__fb-link">
+                            <use xlink:href="./assets/svg/footer.svg#fb"></use>
+                        </svg>
+                        <svg class="footer__inst-link">
+                            <use xlink:href="./assets/svg/footer.svg#inst"></use>
+                        </svg>
+                        <svg class="footer__vimeo-link">
+                            <use xlink:href="./assets/svg/footer.svg#vimeo"></use>
+                        </svg>
+                        <svg class="footer__in-link">
+                            <use xlink:href="./assets/svg/footer.svg#in"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__bottom-container container">
+                <p class="footer__copyright">© 2018 Dayaxe. All rights reserved.</p>
+                <nav class="about-links">
+                    <ul class="about-links__list">
+                        <li class="about-links__item">
+                            <a class="about-links__link">Terms</a>
+                        </li>
+                        <li class="about-links__item">
+                            <a class="about-links__link">Privacy</a>
+                        </li>
+                        <li class="about-links__item">
+                            <a class="about-links__link">Sitemap</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,7 @@
+.about-links {
+  width: 220px;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
