@@ -1,11 +1,135 @@
 .hotel-passes {
+
+  &__container {
+    max-width: 1128px; // 1440 minus paddings
+    margin: 0 auto;
+  
+    padding-right: 24px;
+    padding-left: 24px;
+
+    @media (min-width: 768px) {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+
+    @media (min-width: 1440px) {
+      padding-right: 156px;
+      padding-left: 156px;
+    }
+  } 
+
   &__body {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    column-gap: 32px;
+    row-gap: 32px;
+  }
+
+  &__header {
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__view-all-button {
+    color: #1eb6ff;
+  }
+
+  &__arrow-right {
+    width: 10px;
+    height: 10px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+
+    &-emphasis {
+      color: #1eb6ff;
+    }
   }
 
   &__item {
-    flex-basis: calc(50% - 20px);
+    flex-basis: calc(25% - (32px * 3) / 4);
+    // height: 274px;
+  }
+
+  &__img-container {
+    margin-bottom: 13px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__item-title {
+    margin-bottom: 7px;
+
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #505050;
+  }
+
+  &__item-info {
+    margin-bottom: 9px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 9px;
+  }
+
+  &__service-type {
+    width: 80px;
+    height: 20px;
+
+    font-size: 14px;
+    line-height: 22px;
+    border-radius: 16px;
+  }
+
+  &__city {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  &__price-quality {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item-rating {
+    display: flex;
+    gap: 6px;
+  }
+
+  &__stars {
+    display: flex;
+    gap: 2px;
+  }
+
+  &__star {
+    width: 12px;
+    height: 12px;
+  }
+
+  &__number-of-reviews {
+    color: #1eb6ff;
+  }
+
+  &__item-price {
+    color: #1eb6ff;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  &__sum {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
