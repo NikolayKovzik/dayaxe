@@ -1,17 +1,20 @@
 .default-button {
-  &--dark {
-    display: block;
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
 
+  &--dark {
     background: rgb(45, 185, 254);
     background: linear-gradient(40deg, rgba(45, 185, 254, 1) 0%, rgba(78, 219, 252, 1) 100%);
-    
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: bold;
+
     border: none;
     color: #fff;
   }
 
   &--light {
+    background: transparent;
+    border: 2px solid #1EB6FF;
+    color: #1EB6FF;
   }
 }
