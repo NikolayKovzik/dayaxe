@@ -1,9 +1,8 @@
 .hotel-passes {
-
   &__container {
     max-width: 1128px; // 1440 minus paddings
     margin: 0 auto;
-  
+
     padding-right: 24px;
     padding-left: 24px;
 
@@ -16,13 +15,25 @@
       padding-right: 156px;
       padding-left: 156px;
     }
-  } 
+  }
 
   &__body {
     display: flex;
     flex-wrap: wrap;
     column-gap: 32px;
-    row-gap: 32px;
+    row-gap: 42px;
+
+    @media (min-width: 1024px) {
+      row-gap: 36px;
+    }
+  }
+
+  &__item {
+    flex-basis: calc(50% - 32px / 2);
+    border-radius: 8px;
+    @media (min-width: 1024px) {
+      flex-basis: calc(25% - (32px * 3) / 4);
+    }
   }
 
   &__header {
@@ -55,11 +66,6 @@
     &-emphasis {
       color: #1eb6ff;
     }
-  }
-
-  &__item {
-    flex-basis: calc(25% - (32px * 3) / 4);
-    border-radius: 8px;
   }
 
   &__img-container {
@@ -95,42 +101,55 @@
     border-radius: 8px 0px 5px 0px;
 
     &--festive {
-      background-color: #FF6F5A;
+      background-color: #ff6f5a;
     }
 
     &--tranquil {
-      background-color: #11D17D;
+      background-color: #11d17d;
     }
 
     &--family {
-      background-color: #1EB6FF;
+      background-color: #1eb6ff;
     }
   }
 
   &__item-title {
-    margin-bottom: 7px;
+    margin-bottom: 4px;
 
     font-size: 16px;
     line-height: 16px;
     font-weight: bold;
     color: #505050;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 7px;
+    }
   }
 
   &__item-info {
-    margin-bottom: 9px;
+    margin-bottom: 12px;
 
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 9px;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 9px;
+    }
   }
 
   &__service-type {
     width: 80px;
     height: 20px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     font-size: 14px;
     line-height: 22px;
+    font-weight: normal;
     border-radius: 16px;
   }
 
@@ -160,7 +179,13 @@
   }
 
   &__number-of-reviews {
+    font-size: 12px;
+    line-height: 12px;
     color: #1eb6ff;
+    @media (min-width: 1024px) {
+      font-size: 16px;
+      line-height: 16px;
+    }
   }
 
   &__item-price {
@@ -170,7 +195,11 @@
   }
 
   &__sum {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 16px;
+    @media (min-width: 1024px) {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }
