@@ -2,30 +2,38 @@
   background-color: #3fb4ed;
 
   &__container {
-    height: 468px;
+    height: 540px;
     padding-top: 100px;
 
     background-image: url("~/src/assets/images/first-section-background.png");
     background-repeat: no-repeat;
-    background-position: -70px 0px;
-    background-size: 910px;
+    background-position: -200px 0px;
+    background-size: 1135px;
+    
+    @media (max-width: 320px) {
+      height: auto;
+      padding-bottom: 20px;
+    }
 
-    // box-shadow: inset 90px 15px 70px 30px  #3fb4ed; 
-  
     @media (min-width: 768px) {
       height: 904px - 240px;
       padding-top: 240px;
       background-position: -182px 0px;
       background-size: 1447px;
     }
+    
     @media (min-width: 1024px) {
       height: 800px - 240px;
       background-position: 0px 0px;
     }
+
+    @media (min-width: 1440px) {
+      box-shadow: inset 0px -70px 70px 120px  #3fb4ed; 
+    }
   }
 
   &__title {
-    margin-bottom: 24px;
+    margin-bottom: 40px;
 
     font-size: 36px;
     line-height: 36px;

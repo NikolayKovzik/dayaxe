@@ -1,16 +1,22 @@
 .search {
 
   &__services-list {
-    width: 290px; //!
-    margin-bottom: 20px;
+    width: 75%;
+    margin: 0 auto 20px;
 
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
     column-gap: 20px;
+    row-gap: 10px;
 
     @media (min-width: 768px) {
-      width: auto; //!
-      margin-bottom: 30px;
-      column-gap: 43px;
+      width: 100%;
+      margin: 0px 0px 30px;
+
+      flex-wrap: nowrap;
+      justify-content: flex-start;
     }
 
     @media (min-width: 1440px) {
@@ -61,6 +67,10 @@
 
     &--active {
       font-weight: bold;
+
+      @media (min-width: 1024px) {
+        color: #3fb4ed;
+      }
     }
   }
 }
