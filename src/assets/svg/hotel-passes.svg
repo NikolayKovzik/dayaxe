@@ -1,0 +1,19 @@
+<svg display="none">
+  <symbol id="arrow-right" viewBox="0 0 16 12" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <g id="arrow copy">
+      <path id="Path" d="M1 6H9" stroke="#1EB6FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="Path 2" fill-rule="evenodd" clip-rule="evenodd" d="M9 1L15 6L9 11V1Z" fill="#1EB6FF" stroke="#1EB6FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </symbol>
+
+  <symbol id="painted-star" viewBox="0 0 12 12" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path id="star_01" fill-rule="evenodd" clip-rule="evenodd" d="M6 9.95016L2.2918 12L3 7.65836L0 4.58359L4.1459 3.95016L6 0L7.8541 3.95016L12 4.58359L9 7.65836L9.7082 12L6 9.95016Z" fill="#1EB6FF"/>
+  </symbol>
+
+  <symbol id="empty-star" viewBox="0 0 12 12" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path id="05 copy 3" opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M6 9.95016L2.2918 12L3 7.65836L0 4.58359L4.1459 3.95016L6 0L7.8541 3.95016L12 4.58359L9 7.65836L9.7082 12L6 9.95016Z" fill="#1EB6FF"/>
+  </symbol>
+</svg>
