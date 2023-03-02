@@ -10,6 +10,19 @@
   box-sizing: inherit;
 }
 
+:root {
+  --white: #ffffff;
+  --grey: #505050;
+  --default-dark: #3fb4ed;
+  --default-light: #1EB6FF;
+  --btn-gradient: rgba(78, 219, 252, 1);
+
+  --for-partners-bg: #b1b87d;
+  --help-page-bg: #9797f8;
+  --how-it-works-bg: #7db2b4;
+  --not-found-bg: #122115;
+}
+
 h1,
 h2,
 h3,
