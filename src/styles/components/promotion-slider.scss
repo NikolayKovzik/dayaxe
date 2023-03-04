@@ -1,0 +1,12 @@
+.promotion-slider {
+  position: relative;
+  overflow: hidden;
+  height: 380px;
+
+  &__body {
+    position: absolute;
+    display: flex;
+    gap: 30px;
+  }
+
+}

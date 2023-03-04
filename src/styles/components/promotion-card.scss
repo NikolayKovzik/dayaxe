@@ -1,0 +1,50 @@
+.promotion-card {
+  width: 356px;
+  height: 380px;
+
+  border-radius: 6px;
+
+  &__img-wrapper {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 35px;
+
+    border-radius: 6px 6px 0px 0px
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+    border-radius: 6px 6px 0px 0px
+  }
+
+  &__body {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+
+    color: #505050;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+
+    &-emphasis {
+      color: #1EB6FF;
+    }
+  } 
+
+  &__subtitle {
+    color: #505050;
+    font-size: 16px;
+    line-height: 22px;
+
+    &-emphasis {
+      color: #1EB6FF;
+    }
+  }
+}
