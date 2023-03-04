@@ -15,14 +15,19 @@
   &__img {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 
     border-radius: 6px 6px 0px 0px
   }
 
   &__body {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 29px;
+    padding-right: 29px;
+
+    @media (min-width: 1024px) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
   }
 
   &__title {

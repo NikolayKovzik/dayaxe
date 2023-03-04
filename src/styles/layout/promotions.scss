@@ -16,20 +16,20 @@
   }
 
   &__head {
-    position: relative;
+    margin-bottom: 40px;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
-    margin-bottom: 30px;
-
     font-size: 20px;
     line-height: 20px;
     font-weight: bold;
     color: #505050;
 
     @media (min-width: 768px) {
-      margin-bottom: 30px;
-
       font-size: 24px;
       line-height: 24px;
     }
