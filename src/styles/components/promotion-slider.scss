@@ -24,9 +24,14 @@
     gap: 11px;
 
     position: absolute;
-    top: -19%;
-    right: 2%;
+    top: -17%;
+    right: -1%;
     z-index: 30;
+
+    @media (min-width: 576px) {
+      top: -19%;
+      right: 2%;
+    }
 
     @media (min-width: 1350px) {
       width: 1315px;
@@ -36,8 +41,8 @@
   }
 
   &__button {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
 
     display: flex;
     align-items: center;

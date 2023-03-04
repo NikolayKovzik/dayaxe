@@ -9,10 +9,13 @@ export default class PromotionsSlider {
 
   private mqlLaptop: MediaQueryList;
 
+  private mqlMobile: MediaQueryList;
+
   constructor() {
     this.leftButton = document.querySelector('.promotion-slider__button-left');
     this.rightButton = document.querySelector('.promotion-slider__button-right');
     this.mqlLaptop = window.matchMedia('(min-width: 1024px)');
+    this.mqlMobile = window.matchMedia('(min-width: 576px)');
     this.setCardRatioToContainer();
     this.promotionsContainer = document.querySelector('.promotions__container');
 
@@ -34,6 +37,10 @@ export default class PromotionsSlider {
     this.mqlLaptop.addEventListener('change', () => {
       this.setCardRatioToContainer();
     });
+
+    this.mqlMobile.addEventListener('change', () => {
+      this.setCardRatioToContainer();
+    });
     const ro = new ResizeObserver(entries => {
       document.body.setAttribute(
         'style',
@@ -47,8 +54,10 @@ export default class PromotionsSlider {
   setCardRatioToContainer() {
     if (this.mqlLaptop.matches) {
       this.cardRatioRelativeToContainer = 0.315; // 356px / (1440 - 156 - 156)px
-    } else {
+    } else if (this.mqlMobile.matches) {
       this.cardRatioRelativeToContainer = 0.476; // 328px / (768 - 40 - 40)px
+    } else {
+      this.cardRatioRelativeToContainer = 1; // 272px / (320 - 24 - 24)px
     }
   }
 
