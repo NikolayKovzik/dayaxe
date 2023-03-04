@@ -1,0 +1,11 @@
+<svg display="none">
+  <symbol id="arrow-left" viewBox="0 0 8 12" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M7 1L1 6L7 11V1Z" fill="#1EB6FF" stroke="#1EB6FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="arrow-right" viewBox="0 0 8 12" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1 1L7 6L1 11V1Z" fill="#1EB6FF" stroke="#1EB6FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
