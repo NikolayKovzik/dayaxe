@@ -21,6 +21,8 @@ export default class PromotionsSlider {
 
   private numberOfCards: number;
 
+  private numberOfCardsOnScreen: number;
+
   private mqlLaptop: MediaQueryList;
 
   private mqlMobile: MediaQueryList;
@@ -41,27 +43,40 @@ export default class PromotionsSlider {
 
     this.calcCardRatioToContainer();
     this.calcCardGap();
+    this.calcNumberOfCardsOnScreen();
     this.toggleButtonsAvailability();
 
     this.init();
   }
 
   init() {
+    document.body.setAttribute(
+      'style',
+      `--promotion-card-width: ${this.promotionsContainer.clientWidth * this.cardRatioRelativeToContainer}px`,
+    );
+
     this.mqlLaptop.addEventListener('change', () => {
       this.calcCardRatioToContainer();
       this.calcCardGap();
+      this.calcNumberOfCardsOnScreen();
     });
 
     this.mqlMobile.addEventListener('change', () => {
       this.calcCardRatioToContainer();
       this.calcCardGap();
+      this.calcNumberOfCardsOnScreen();
     });
 
     const ro = new ResizeObserver(entries => {
-      document.body.setAttribute(
-        'style',
-        `--promotion-card-width: ${entries[0].contentRect.width * this.cardRatioRelativeToContainer}px`,
+      const cardWidth = entries[0].contentRect.width * this.cardRatioRelativeToContainer;
+
+      this.sliderCurrentPosition = -(
+        cardWidth * this.currentFirstCardOnTheLeft +
+        this.cardGap * this.currentFirstCardOnTheLeft
       );
+
+      document.body.setAttribute('style', `--promotion-card-width: ${cardWidth}px`);
+      this.sliderBody.style.transform = `translateX(${this.sliderCurrentPosition}px)`;
     });
 
     ro.observe(this.promotionsContainer);
@@ -94,21 +109,24 @@ export default class PromotionsSlider {
     }
   }
 
+  calcNumberOfCardsOnScreen() {
+    if (this.mqlLaptop.matches) {
+      this.numberOfCardsOnScreen = 3;
+    } else if (this.mqlMobile.matches) {
+      this.numberOfCardsOnScreen = 2;
+    } else {
+      this.numberOfCardsOnScreen = 1;
+    }
+  }
+
   moveSliderLeft() {
     this.currentFirstCardOnTheLeft += 1;
     this.sliderCurrentPosition = this.sliderCurrentPosition - this.card.clientWidth - this.cardGap;
-    // this.card.clientWidth * this.currentFirstCardOnTheLeft + this.cardGap * this.currentFirstCardOnTheLeft
     this.sliderBody.style.transform = `translateX(${this.sliderCurrentPosition}px)`;
   }
 
   moveSliderRight() {
     this.currentFirstCardOnTheLeft -= 1;
-    // this.sliderBody.style.transform = `translateX(-${
-    //   this.card.clientWidth * this.currentFirstCardOnTheLeft +
-    //   this.cardGap * this.currentFirstCardOnTheLeft -
-    //   this.card.clientWidth -
-    //   this.cardGap
-    // }px)`;
     this.sliderCurrentPosition = this.sliderCurrentPosition + this.card.clientWidth + this.cardGap;
     this.sliderBody.style.transform = `translateX(${this.sliderCurrentPosition}px)`;
   }
@@ -120,7 +138,7 @@ export default class PromotionsSlider {
       this.leftButton.disabled = false;
     }
 
-    if (this.currentFirstCardOnTheLeft === this.numberOfCards - 3) {
+    if (this.currentFirstCardOnTheLeft === this.numberOfCards - this.numberOfCardsOnScreen) {
       this.rightButton.disabled = true;
     } else {
       this.rightButton.disabled = false;
