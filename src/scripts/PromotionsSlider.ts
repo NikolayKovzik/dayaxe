@@ -1,11 +1,25 @@
 export default class PromotionsSlider {
-  private leftButton: HTMLElement;
+  private leftButton: HTMLButtonElement;
 
-  private rightButton: HTMLElement;
+  private rightButton: HTMLButtonElement;
 
   private promotionsContainer: HTMLElement;
 
+  private sliderBody: HTMLElement;
+
+  private card: HTMLElement;
+
   private cardRatioRelativeToContainer: number;
+
+  private cardWidth: number;
+
+  private cardGap: number;
+
+  private currentFirstCardOnTheLeft: number;
+
+  private sliderCurrentPosition: number;
+
+  private numberOfCards: number;
 
   private mqlLaptop: MediaQueryList;
 
@@ -14,33 +28,35 @@ export default class PromotionsSlider {
   constructor() {
     this.leftButton = document.querySelector('.promotion-slider__button-left');
     this.rightButton = document.querySelector('.promotion-slider__button-right');
+    this.promotionsContainer = document.querySelector('.promotions__container');
+    this.sliderBody = document.querySelector('.promotion-slider__body');
+    this.card = document.querySelector('.promotion-card');
+
     this.mqlLaptop = window.matchMedia('(min-width: 1024px)');
     this.mqlMobile = window.matchMedia('(min-width: 576px)');
-    this.setCardRatioToContainer();
-    this.promotionsContainer = document.querySelector('.promotions__container');
+
+    this.currentFirstCardOnTheLeft = 0;
+    this.sliderCurrentPosition = 0;
+    this.numberOfCards = 10;
+
+    this.calcCardRatioToContainer();
+    this.calcCardGap();
+    this.toggleButtonsAvailability();
 
     this.init();
-    this.updateCardWidth();
   }
 
   init() {
-    // document.body.setAttribute('style', `--promotion-card-width: ${356}px`);
-    // window.addEventListener(
-    //   'resize',
-    //   () => {
-    //     this.updateCardWidth();
-    //   },
-    //   {
-    //     passive: true,
-    //   },
-    // );
     this.mqlLaptop.addEventListener('change', () => {
-      this.setCardRatioToContainer();
+      this.calcCardRatioToContainer();
+      this.calcCardGap();
     });
 
     this.mqlMobile.addEventListener('change', () => {
-      this.setCardRatioToContainer();
+      this.calcCardRatioToContainer();
+      this.calcCardGap();
     });
+
     const ro = new ResizeObserver(entries => {
       document.body.setAttribute(
         'style',
@@ -49,9 +65,18 @@ export default class PromotionsSlider {
     });
 
     ro.observe(this.promotionsContainer);
+
+    this.rightButton.addEventListener('click', () => {
+      this.moveSliderLeft();
+      this.toggleButtonsAvailability();
+    });
+    this.leftButton.addEventListener('click', () => {
+      this.moveSliderRight();
+      this.toggleButtonsAvailability();
+    });
   }
 
-  setCardRatioToContainer() {
+  calcCardRatioToContainer() {
     if (this.mqlLaptop.matches) {
       this.cardRatioRelativeToContainer = 0.315; // 356px / (1440 - 156 - 156)px
     } else if (this.mqlMobile.matches) {
@@ -61,8 +86,44 @@ export default class PromotionsSlider {
     }
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  updateCardWidth() {
-    document.body.setAttribute('style', `--promotion-card-width: ${window.innerWidth / 4}px`);
+  calcCardGap() {
+    if (this.mqlLaptop.matches) {
+      this.cardGap = 30;
+    } else {
+      this.cardGap = 32;
+    }
+  }
+
+  moveSliderLeft() {
+    this.currentFirstCardOnTheLeft += 1;
+    this.sliderCurrentPosition = this.sliderCurrentPosition - this.card.clientWidth - this.cardGap;
+    // this.card.clientWidth * this.currentFirstCardOnTheLeft + this.cardGap * this.currentFirstCardOnTheLeft
+    this.sliderBody.style.transform = `translateX(${this.sliderCurrentPosition}px)`;
+  }
+
+  moveSliderRight() {
+    this.currentFirstCardOnTheLeft -= 1;
+    // this.sliderBody.style.transform = `translateX(-${
+    //   this.card.clientWidth * this.currentFirstCardOnTheLeft +
+    //   this.cardGap * this.currentFirstCardOnTheLeft -
+    //   this.card.clientWidth -
+    //   this.cardGap
+    // }px)`;
+    this.sliderCurrentPosition = this.sliderCurrentPosition + this.card.clientWidth + this.cardGap;
+    this.sliderBody.style.transform = `translateX(${this.sliderCurrentPosition}px)`;
+  }
+
+  toggleButtonsAvailability() {
+    if (this.currentFirstCardOnTheLeft === 0) {
+      this.leftButton.disabled = true;
+    } else {
+      this.leftButton.disabled = false;
+    }
+
+    if (this.currentFirstCardOnTheLeft === this.numberOfCards - 3) {
+      this.rightButton.disabled = true;
+    } else {
+      this.rightButton.disabled = false;
+    }
   }
 }

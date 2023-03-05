@@ -13,6 +13,9 @@
     display: flex;
     gap: 32px;
 
+    transition: all 0.5s;
+    left: 0px;
+
     @media (min-width: 1024px) {
       gap: 30px;
     }
@@ -51,11 +54,21 @@
     border-radius: 28px;
     border: 2px solid #1eb6ff;
     background-color: transparent;
+
+    &:disabled {
+      border: 2px solid #505050;
+    }
+
+    &:disabled .promotion-slider__arrow-left-icon,
+    &:disabled .promotion-slider__arrow-right-icon {
+      fill: #505050;
+    }
   }
 
   &__arrow-left-icon,
   &__arrow-right-icon {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 20px;
+    fill: #1eb6ff;
   }
 }
